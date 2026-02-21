@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { json } from "@remix-run/node";
-import { useLoaderData, useNavigate } from "@remix-run/react";
+import { json } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import {
   Page,
   Layout,
@@ -10,7 +10,6 @@ import {
   Text,
   Badge,
   InlineStack,
-  Icon,
 } from "@shopify/polaris";
 import { authenticate } from "../shopify.server";
 import { PrismaClient } from "@prisma/client";

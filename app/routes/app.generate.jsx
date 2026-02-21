@@ -1,5 +1,5 @@
-import { json, redirect } from "@remix-run/node";
-import { useLoaderData, useNavigate, useSubmit } from "@remix-run/react";
+import { json, redirect } from "react-router";
+import { useLoaderData, useNavigate, useSubmit } from "react-router";
 import { useState } from "react";
 import {
   Page,
@@ -50,7 +50,6 @@ export const action = async ({ request }) => {
   const generate = generators[type];
   const pageData = generate({ shopName, shopEmail, shopUrl });
 
-  // Créer la page sur Shopify
   const response = await admin.graphql(`
     mutation pageCreate($title: String!, $body: String!) {
       pageCreate(page: { title: $title, body: $body }) {
