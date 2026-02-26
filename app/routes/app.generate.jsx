@@ -1,4 +1,4 @@
-import { json, redirect } from "react-router";
+import { redirect } from "react-router";
 import { useLoaderData, useNavigate, useSubmit } from "react-router";
 import { useState } from "react";
 import {
@@ -7,7 +7,6 @@ import {
   Card,
   Button,
   BlockStack,
-  Text,
   TextField,
   Banner,
 } from "@shopify/polaris";
@@ -27,7 +26,7 @@ export const loader = async ({ request }) => {
   const type = url.searchParams.get("type") || "privacy";
   const shop = session.shop;
 
-  return json({ shop, type });
+  return { shop, type };
 };
 
 export const action = async ({ request }) => {
@@ -88,7 +87,6 @@ export const action = async ({ request }) => {
       where: { id: `${shop}-${type}` },
       create: {
         id: `${shop}-${type}`,
-        shop,
         type,
         shopifyId,
         shopifyUrl,

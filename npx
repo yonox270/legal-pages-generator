@@ -1,0 +1,9 @@
+Running pre-dev command: "npx prisma generate"Preparing dev preview on legal-pages-dev.myshopify.comProxy server started on port 55704 GraphiQL server started on port 3457✅ Ready, watching for changes in your app │ Access scopes auto-granted: read_online_store_pages, write_online_store_pages└ Using URL: https://authority-north-peripheral-strengthening.trycloudflare.comPrisma schema loaded from prisma\schema.prisma
+Datasource "db": PostgreSQL database "neondb", schema "public" at "ep-floral-breeze-abtr6x2h-pooler.eu-west-2.aws.neon.tech"
+
+1 migration found in prisma/migrations
+
+
+No pending migrations to apply.
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m55707[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m

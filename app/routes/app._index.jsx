@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { json } from "react-router";
 import { useLoaderData, useNavigate } from "react-router";
 import {
   Page,
@@ -27,7 +25,7 @@ export const loader = async ({ request }) => {
 
   const pages = await prisma.page.findMany({ where: { shop } });
 
-  return json({ shop, store, pages });
+  return { shop, store, pages };
 };
 
 const PAGE_TYPES = [
