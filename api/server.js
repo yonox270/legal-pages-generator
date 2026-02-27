@@ -3,5 +3,5 @@ import express from "express";
 import * as build from "../build/server/index.js";
 
 const app = express();
-app.all("*", createRequestHandler({ build }));
+app.use(createRequestHandler({ build }));
 export default app;
