@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/build/client/assets/$1" },
-    { "source": "/(.*)", "destination": "/api/index" }
-  ]
-}
