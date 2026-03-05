@@ -16,19 +16,19 @@ api_version = "2024-10"
 
   [[webhooks.subscriptions]]
   topics = ["app/uninstalled"]
-  uri = "/webhooks"
+  uri = "https://legal-pages-generator.vercel.app/webhooks"
 
   [[webhooks.subscriptions]]
   topics = ["customers/data_request"]
-  uri = "/webhooks"
+  uri = "https://legal-pages-generator.vercel.app/webhooks"
 
   [[webhooks.subscriptions]]
   topics = ["customers/redact"]
-  uri = "/webhooks"
+  uri = "https://legal-pages-generator.vercel.app/webhooks"
 
   [[webhooks.subscriptions]]
   topics = ["shop/redact"]
-  uri = "/webhooks"
+  uri = "https://legal-pages-generator.vercel.app/webhooks"
 
 [pos]
 embedded = false
