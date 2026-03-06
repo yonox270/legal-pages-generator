@@ -11,24 +11,24 @@ redirect_urls = [
   "https://legal-pages-generator.vercel.app/auth/callback"
 ]
 
-[webhooks]
-api_version = "2026-01"
-
-  [[webhooks.subscriptions]]
-  topics = ["app/uninstalled"]
-  uri = "https://legal-pages-generator.vercel.app/webhooks"
-
-  [[webhooks.subscriptions]]
-  topics = ["customers/data_request"]
-  uri = "https://legal-pages-generator.vercel.app/webhooks"
-
-  [[webhooks.subscriptions]]
-  topics = ["customers/redact"]
-  uri = "https://legal-pages-generator.vercel.app/webhooks"
-
-  [[webhooks.subscriptions]]
-  topics = ["shop/redact"]
-  uri = "https://legal-pages-generator.vercel.app/webhooks"
+webhooks: {
+  APP_UNINSTALLED: {
+    deliveryMethod: DeliveryMethod.Http,
+    callbackUrl: "https://legal-pages-generator.vercel.app/webhooks",
+  },
+  CUSTOMERS_DATA_REQUEST: {
+    deliveryMethod: DeliveryMethod.Http,
+    callbackUrl: "https://legal-pages-generator.vercel.app/webhooks",
+  },
+  CUSTOMERS_REDACT: {
+    deliveryMethod: DeliveryMethod.Http,
+    callbackUrl: "https://legal-pages-generator.vercel.app/webhooks",
+  },
+  SHOP_REDACT: {
+    deliveryMethod: DeliveryMethod.Http,
+    callbackUrl: "https://legal-pages-generator.vercel.app/webhooks",
+  },
+},
 
 [pos]
 embedded = false
