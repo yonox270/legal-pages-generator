@@ -1,12 +1,12 @@
 {
+  "buildCommand": "npm run build",
   "outputDirectory": "build/client",
-  "functions": {
-    "api/server.js": {
-      "includeFiles": "build/**"
-    }
-  },
+  "installCommand": "npm install",
+  "framework": null,
   "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/build/client/assets/$1" },
-    { "source": "/(.*)", "destination": "/api/server" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
