@@ -1,6 +1,5 @@
 name = "Legal Pages Generator"
 client_id = "de5ea8a617948c0065ea7740ac0650d2"
-application_url = "https://legal-pages-generator-882458656769.oxygen.run"
 embedded = true
 
 [access_scopes]
