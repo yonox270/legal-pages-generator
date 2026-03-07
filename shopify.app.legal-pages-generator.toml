@@ -1,22 +1,16 @@
-client_id = "257601e523745b5ee78de012d18c8520"
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0265ac2054b840dc01bdfd33c3ccb694"
 name = "Legal Pages Generator"
-application_url = "https://legal-pages-generator.vercel.app"
+application_url = "https://example.com"
 embedded = true
 
-[build]
-automatically_update_urls_on_dev = true
-
 [webhooks]
-api_version = "2026-01"
-
-[[webhooks.subscriptions]]
-compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
-uri = "https://legal-pages-generator.vercel.app/webhooks"
+api_version = "2026-04"
 
 [access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "read_online_store_pages,write_online_store_pages"
 
 [auth]
-redirect_urls = [
-  "https://legal-pages-generator.vercel.app/auth/callback"
-]
+redirect_urls = [ "https://example.com/api/auth" ]
