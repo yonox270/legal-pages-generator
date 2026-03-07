@@ -11,7 +11,7 @@ api_version = "2026-01"
 
 [[webhooks.subscriptions]]
 compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
-uri = "/webhooks"
+uri = "https://legal-pages-generator.vercel.app/webhooks"
 
 [access_scopes]
 scopes = "read_online_store_pages,write_online_store_pages"
