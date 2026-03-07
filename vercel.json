@@ -1,12 +1,16 @@
 {
+  "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "build/client",
   "installCommand": "npm install",
-  "framework": null,
-  "rewrites": [
+  "outputDirectory": "build/client",
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/build/client/(.*)",
+      "dest": "/build/client/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/server.js"
     }
   ]
 }
