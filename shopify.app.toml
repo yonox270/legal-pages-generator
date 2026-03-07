@@ -1,16 +1,8 @@
-name = "Legal Pages Generator"
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 client_id = "de5ea8a617948c0065ea7740ac0650d2"
-application_url = "https://legal-pages-generator.vercel.app"
+name = "Legal Pages Generator"
+application_url = "https://legal-pages-generator.vercel.app/"
 embedded = true
-
-[access_scopes]
-scopes = "read_online_store_pages,write_online_store_pages"
-
-[auth]
-redirect_urls = [
-  "https://legal-pages-generator.vercel.app/auth/callback",
-  "https://legal-pages-generator-882458656769.oxygen.run/auth/callback"
-]
 
 [webhooks]
 api_version = "2026-01"
@@ -19,8 +11,10 @@ api_version = "2026-01"
 compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
 uri = "/webhooks"
 
-[pos]
-embedded = false
+[access_scopes]
+scopes = "read_online_store_pages,write_online_store_pages"
+optional_scopes = [ ]
+use_legacy_install_flow = false
 
-[build]
-automatically_update_urls_on_dev = true
+[auth]
+redirect_urls = [ "https://legal-pages-generator.vercel.app/auth/callback" ]
