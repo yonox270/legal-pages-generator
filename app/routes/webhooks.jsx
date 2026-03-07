@@ -1,5 +1,11 @@
 import crypto from "crypto";
 
+// Pour les requêtes GET (non autorisées)
+export const loader = async () => {
+  return new Response("Method Not Allowed", { status: 405 });
+};
+
+// Pour les requêtes POST (webhooks Shopify)
 export const action = async ({ request }) => {
   try {
     const topic = request.headers.get("X-Shopify-Topic");
